@@ -7,9 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TaskNoteTest {
   @Test
   void タスク説明が3000文字より多い場合は例外が発生する() {
-    assertThrows(IllegalArgumentException.class, () -> {
-      new TaskNote("a".repeat(3001));
-    });
+    assertThrows(IllegalArgumentException.class, () -> new TaskNote("a".repeat(3001)));
   }
 
   @Test
